@@ -1,0 +1,40 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: #f9fafb;
+}
+
+.app-container {
+  display: flex;
+}
+
+.main-content {
+  width: calc(100% - 237px);
+  min-width: 0;
+  margin-left: 237px;
+  flex: 1;
+  min-height: 100vh;
+  background: #f9fafb;
+}
+
+.page-content {
+  padding: 40px;
+}
+
+.page-content h1,
+.page-content h4 {
+  font-size: 22px;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 6px;
+}
+
+.page-content p {
+  font-size: 14px;
+  color: #6b7280;
+}

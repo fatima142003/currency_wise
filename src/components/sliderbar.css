@@ -1,0 +1,399 @@
+/* Sidebar */
+.side-bar {
+  width: 220px;
+  height: 100vh;
+  background: #0f172a;
+  color: #ffffff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  z-index: 100;
+}
+
+/* Logo & Brand */
+.hero-slider {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 22px 18px;
+  border-bottom: 1px solid #1e293b;
+}
+
+.logo {
+  width: 36px;
+  height: 36px;
+  background: #0e7490;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  flex-shrink: 0;
+}
+
+.name h2 {
+  font-size: 15px;
+  font-weight: 700;
+  margin: 0 0 3px;
+  white-space: nowrap;
+  color: #f1f5f9;
+}
+
+.name p {
+  font-size: 11px;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  color: #cfe0f8;
+  margin: 0;
+  white-space: nowrap;
+}
+
+/* Menu Items */
+.menu-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 11px 18px;
+  font-size: 13px;
+  color: #94a3b8;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+  border-left: 3px solid transparent;
+}
+
+.menu-item:hover {
+  background: #1e293b;
+  color: #f1f5f9;
+  border-left: 3px solid #0e7490;
+}
+
+.menu-item.active {
+  background: #1e293b;
+  color: #38bdf8;
+  border-left: 3px solid #38bdf8;
+  font-weight: 600;
+}
+
+.menu-icon {
+  font-size: 15px;
+  width: 20px;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.menu-text {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+
+/* ==============================
+   SIDEBAR LAYOUT
+================================= */
+
+.side-bar {
+  width: 237px;
+  min-width: 237px;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+
+  background-color: #030819;
+  color: #a0aec6;
+  font-family: Inter, Arial, sans-serif;
+  box-sizing: border-box;
+}
+
+.side-bar * {
+  box-sizing: border-box;
+}
+
+/* ==============================
+   BRAND / LOGO
+================================= */
+
+.hero-slider {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  flex-shrink: 0;
+  padding: 19px 18px 12px;
+}
+
+.logo {
+  width: 34px;
+  height: 34px;
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid #527aff;
+  border-radius: 10px;
+  background: #2856f5;
+
+  font-size: 18px;
+  box-shadow: 0 3px 8px #2448e633;
+}
+
+.name {
+  min-width: 0;
+}
+
+.name h2 {
+  margin: 0;
+  color: #f8fafc;
+  font-size: 14px;
+  font-weight: 650;
+  letter-spacing: -0.3px;
+  line-height: 1.4;
+  white-space: nowrap;
+}
+
+.name h2 span {
+  color: #5e9aff;
+}
+
+/* ==============================
+   ADMIN BADGE
+================================= */
+
+.admin-badge {
+  width: fit-content;
+  min-height: 25px;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+
+  margin: 2px 18px 17px;
+  padding: 4px 9px;
+
+  border: 1px solid #1c3159;
+  border-radius: 8px;
+  background: #08132b;
+
+  color: #a6bbdf;
+  font-size: 11px;
+}
+
+.admin-dot {
+  width: 5px;
+  height: 5px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: #5792ff;
+}
+
+/* ==============================
+   NAVIGATION CONTAINER
+================================= */
+
+.sidebar-navigation {
+  flex: 1;
+  min-height: 0;
+  padding: 0 11px 12px;
+  overflow-x: hidden;
+  overflow-y: auto;
+
+  scrollbar-width: thin;
+  scrollbar-color: #24304a transparent;
+}
+
+.sidebar-navigation::-webkit-scrollbar {
+  width: 4px;
+}
+
+.sidebar-navigation::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background: #24304a;
+}
+
+/* ==============================
+   MENU LINKS
+================================= */
+
+.menu-item {
+  width: 100%;
+  min-height: 34px;
+
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  margin: 0 0 3px;
+  padding: 8px 11px;
+
+  border: 1px solid transparent;
+  border-radius: 9px;
+
+  background: transparent;
+  color: #91a2bd;
+  text-decoration: none;
+
+  font-size: 12px;
+  font-weight: 450;
+  line-height: 1.4;
+
+  transition:
+    background-color 0.18s ease,
+    color 0.18s ease;
+}
+
+.menu-item:hover {
+  background: #101a30;
+  color: #f1f5ff;
+}
+
+.menu-item.active {
+  border-color: #20283b;
+  background: #151b2c;
+  color: #f5f7ff;
+}
+
+.menu-item.active .menu-icon {
+  color: #76a2ff;
+}
+
+/* Icons */
+.menu-icon {
+  width: 15px;
+  min-width: 15px;
+  height: 18px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #7386a5;
+  font-size: 16px;
+  line-height: 1;
+}
+
+.menu-text {
+  flex: 1;
+  min-width: 0;
+}
+
+/* ==============================
+   SECTION HEADINGS
+================================= */
+
+.menu-section {
+  margin-top: 19px;
+}
+
+.section-title {
+  margin: 0 0 7px;
+  padding: 0 11px;
+
+  color: #637592;
+  font-size: 10px;
+  font-weight: 650;
+  line-height: 1.5;
+  letter-spacing: 0.8px;
+}
+
+/* ==============================
+   BOTTOM FOOTER
+================================= */
+
+.sidebar-footer {
+  flex-shrink: 0;
+  margin: 0 18px;
+  padding: 14px 0 15px;
+
+  border-top: 1px solid #172035;
+  background: #030819;
+}
+
+.footer-status {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+
+  min-width: 0;
+  margin-bottom: 11px;
+}
+
+.live-dot {
+  width: 8px;
+  height: 8px;
+  flex-shrink: 0;
+
+  border-radius: 50%;
+  background: #00d7a0;
+  box-shadow: 0 0 0 3px #00d7a015;
+}
+
+.status-label {
+  color: #a5b4cb;
+  font-size: 10px;
+  white-space: nowrap;
+}
+
+.environment-badge {
+  margin-left: auto;
+  padding: 3px 6px;
+
+  border-radius: 4px;
+  background: #121b30;
+  color: #8999b3;
+
+  font-family: monospace;
+  font-size: 10px;
+}
+
+.sidebar-footer p {
+  margin: 4px 0;
+  color: #61728f;
+  font-size: 10px;
+  line-height: 1.5;
+}
+
+/* ==============================
+   MAIN CONTENT COMPATIBILITY
+================================= */
+
+/* Apply this class to the content beside the sidebar. */
+.main-content {
+  min-width: 0;
+  min-height: 100vh;
+  margin-left: 237px;
+  width: calc(100% - 237px);
+}
+
+/* ==============================
+   RESPONSIVE
+================================= */
+
+@media (max-width: 768px) {
+  .side-bar {
+    width: 210px;
+    min-width: 210px;
+  }
+
+  .hero-slider {
+    padding-right: 10px;
+    padding-left: 13px;
+  }
+
+  .name h2 {
+    font-size: 12px;
+  }
+
+  .main-content {
+    margin-left: 210px;
+    width: calc(100% - 210px);
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "OTC Retail": {
+    "KYC Documents": [
+      { "id": 1, "name": "Passport", "mandatory": true, "months": 12, "enabled": true },
+      { "id": 2, "name": "Driving License", "mandatory": false, "months": 12, "enabled": true },
+      { "id": 3, "name": "National Id", "mandatory": false, "months": 12, "enabled": true },
+      { "id": 4, "name": "New Document Type", "mandatory": false, "months": 12, "enabled": true }
+    ],
+    "Risk Scoring": [{ "id": 5, "key": "pep", "points": 40 }, { "id": 6, "key": "sanctioned_country", "points": 100 }, { "id": 7, "key": "high_risk_customer", "points": 45 }],
+    "Transaction Limits": { "Daily_Limit": "$10,000", "Monthly_Limit": "$50,000", "Single_Transaction_Limit": "$8,000" }
+  },
+  "Wholesale B2B": {
+    "KYC Documents": [
+      { "id": 8, "name": "Certificate of Incorporation", "mandatory": true, "months": 12, "enabled": true },
+      { "id": 9, "name": "Trust Deed", "mandatory": false, "months": 12, "enabled": true },
+      { "id": 10, "name": "Business Registration", "mandatory": false, "months": 12, "enabled": true },
+      { "id": 11, "name": "Director ID", "mandatory": false, "months": 12, "enabled": true },
+      { "id": 12, "name": "New Document Type", "mandatory": false, "months": 12, "enabled": true }
+    ],
+    "Risk Scoring": [{ "id": 13, "key": "pep", "points": 60 }, { "id": 14, "key": "sanctioned_country", "points": 100 }, { "id": 15, "key": "high_risk_customer", "points": 40 }, { "id": 16, "key": "ubu_unverified", "points": 45 }],
+    "Transaction Limits": { "Daily_Limit": "$2,50,000", "Monthly_Limit": "$20,00,000", "Single_Transaction_Limit": "$1,00,000" }
+  },
+  "Online-FX": {
+    "KYC Documents": [{ "id": 17, "name": "Passport", "mandatory": true, "months": 12, "enabled": true }, { "id": 18, "name": "National Id", "mandatory": false, "months": 12, "enabled": true }, { "id": 19, "name": "Selfie Liveness Check", "mandatory": false, "months": 12, "enabled": true }],
+    "Risk Scoring": [{ "id": 20, "key": "pep", "points": 50 }, { "id": 21, "key": "sanctioned_country", "points": 100 }, { "id": 22, "key": "high_risk_customer", "points": 35 }],
+    "Transaction Limits": { "Daily_Limit": "$5,000", "Monthly_Limit": "$25,000", "Single_Transaction_Limit": "$3,000" }
+  },
+  "Partners and Resellers": {
+    "KYC Documents": [{ "id": 23, "name": "Government-Issued ID", "mandatory": true, "months": 12, "enabled": true }],
+    "Risk Scoring": [{ "id": 24, "key": "high_risk_customer", "points": 30 }],
+    "Transaction Limits": { "Daily_Limit": "$10,000", "Monthly_Limit": "$50,000", "Single_Transaction_Limit": "$5,000" }
+  }
+}
