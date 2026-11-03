@@ -160,6 +160,66 @@ export const portalData = {
 
   ],
 
+  "parameterCategory":{
+    "heading": " Master Parameter Categories",
+    "description":"The channel and product groups master parameters belong to, e.g. OTC, WHSL, ONL, GLOBAL, REM, BUL.",
+  },
+  "ParameterCategoryList": [
+    {
+    id: 1,
+    code: "OTC",
+    category: "OTC channel",
+    description:
+      "Face-to-face individual and sole-trader transactions at the counter.",
+    parameters:0,
+    status: "Active",
+  },
+  {
+    id: 2,
+    code: "WHSL",
+    category: "Wholesale channel",
+    description:
+      "Offline B2B orders from licensed FX bureaux, financial institutions and corporate clients, incl. trading profiles and authorised persons.",
+    parameters: 0,
+    status: "Active",
+  },
+  {
+    id: 3,
+    code: "ONL",
+    category: "Online channel",
+    description:
+      "Money2Travel online orders by verified Australian individuals, paid by PayID.",
+    parameters: 0,
+    status: "Active",
+  },
+  {
+    id: 4,
+    code: "GLOBAL",
+    category: "Global — all channels",
+    description:
+      "Regulatory deadlines, programme reviews, record keeping, training and audit across all channels.",
+    parameters: 0,
+    status: "Active",
+  },
+  {
+    id: 5,
+    code: "REM",
+    category: "PRD-REM Remittance",
+    description:
+      "Cross-border remittance product (designated service: value transfer).",
+    parameters: 0,
+    status: "Active",
+  },
+  {
+    id: 6,
+    code: "BUL",
+    category: "PRD-BUL Bullion",
+    description:
+      "Bullion dealing product (buying and selling precious metals).",
+    parameters: 0,
+    status: "Active",
+  },
+  ],
 
 "alerts": [
     {
@@ -337,6 +397,11 @@ export const portalData = {
     "/resolution": "Resolution Requirements",
     "/alerts": "Alerts",
     "/cases": "Cases",
+    "/parameterCategory": "Parameter Categories",
+    "/currencies": "Currencies",
+    "/master-parameters": "Master Parameters",
+    "/configuration": "Configuration",
+    "/tenants": "Tenants"
   },
   "navigation": [
     {
@@ -461,5 +526,7 @@ export const caseFilters = portalData.caseFilters;
 export const notifications = portalData.notifications;
 export const pageNames = portalData.pageNames;
 export const navigation = portalData.navigation;
+export const parameterCategory=portalData.parameterCategory;
+export const ParameterCategoryList=portalData.ParameterCategoryList;
 
 export const initialDocuments = channelDocuments;

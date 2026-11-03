@@ -14,6 +14,7 @@ import Alerts from './pages/Alerts';
 import Cases from './pages/Cases';
 import CDD_Onbording from './pages/CDD_onbording';
 import Currencies from './pages/currencies';
+import ParameterCategory from './pages/para-category.jsx';
 
 function App() {
   return (
@@ -28,6 +29,8 @@ function App() {
             <Route path="/channel-config" element={<ChannelConfig />} />
             <Route path="/products" element={<Products />} />
             <Route path="/CDD_onbording" element={<CDD_Onbording />} />
+            <Route path="/para-category" element={<ParameterCategory />} />
+            <Route path="/parameter-categories" element={<ParameterCategory />} />
 
 
             <Route path="/parameters" element={<Parameters />} />

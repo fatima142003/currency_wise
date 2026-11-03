@@ -6,11 +6,12 @@ import {
   Pencil,
   PowerIcon,
 } from "lucide-react";
+import"./currencies.css";
 
 const emptyForm = {
     code:"",
     title:"",
-    Active:true,
+    active:true,
     updated:"",
 }
 
@@ -50,10 +51,11 @@ function Currencies(){
   }, [currencies]);
 
   const handleEditCurrency = (currency) => {
-    setFormData(currency);
+    setFormData({ code: currency.code, title: currency.title, active: currency.active });
     setEditingId(currency.code);
     setShowModal(true);
-  }
+    setError("");
+  };
 
   const activeCount = currencies.filter(
     (currency) => currency.active
@@ -85,18 +87,35 @@ function Currencies(){
     setShowModal(true);
   }
 
-  const handleeditCurrency = (currency) => {
-    setEditingId(currency.id);
+  const handleSaveCurrency = (event) => {
+    event.preventDefault();
+    const code = formData.code.trim().toUpperCase();
+    const title = formData.title.trim();
+    if (!code || !title) {
+      setError("Enter a currency code and title.");
+      return;
+    }
+    if (editingId === null && currencies.some((currency) => currency.code === code)) {
+      setError("That currency code already exists.");
+      return;
+    }
+    setCurrencies((current) => editingId === null
+      ? [...current, { ...formData, code, title, updated: new Date().toLocaleDateString() }]
+      : current.map((currency) => currency.code === editingId
+        ? { ...currency, ...formData, code, title, updated: new Date().toLocaleDateString() }
+        : currency));
+    setShowModal(false);
+  };
 
-    setFormData({
-      code: currency.code,
-      title: currency.title,
-      active: currency.active,
-    });
+  const handleToggleActive = (code) => {
+    setCurrencies((current) => current.map((currency) => currency.code === code
+      ? { ...currency, active: !currency.active }
+      : currency));
+  };
 
-    setShowModal(true);
-    setError("");
-  }
+  const handleDeleteCurrency = (code) => {
+    setCurrencies((current) => current.filter((currency) => currency.code !== code));
+  };
 
    
 
@@ -174,7 +193,7 @@ function Currencies(){
                 </thead>
                 <tbody>
                     {filteredCurrencies.map((currency) => (
-                        <tr key= {currency.id}>
+                        <tr key={currency.code}>
                             <td>
                                <span className="currency-code">{currency.code}</span>
                             </td>
@@ -194,11 +213,11 @@ function Currencies(){
                                 <button className="edit-btn" onClick={() => handleEditCurrency(currency)}>
                                     <Pencil size={16} />
                                 </button>
-                                <button className="deactivate-btn" onClick={() => handleToggleActive(currency.id)}>
+                                <button className="deactivate-btn" onClick={() => handleToggleActive(currency.code)}>
                                 
                                     <PowerIcon size={16} />
                                 </button>
-                                <button className="delete-btn" onClick={() => handleDeleteCurrency(currency.id)}>
+                                <button className="delete-btn" onClick={() => handleDeleteCurrency(currency.code)}>
                                     <Trash2 size={16} />
                                 </button>
                             </td>
@@ -221,10 +240,29 @@ function Currencies(){
           <strong>{filteredCurrencies.length}</strong>{" "}
           of <strong>{currencies.length}</strong> currencies
         </div>
-        
+
 
        
-
+      {showModal && (
+        <div className="currency-modal-backdrop" role="presentation" onMouseDown={(event) => {
+          if (event.target === event.currentTarget) setShowModal(false);
+        }}>
+          <form className="currency-modal" onSubmit={handleSaveCurrency}>
+            <h2>{editingId === null ? "New currency" : "Edit currency"}</h2>
+            <label>Code
+              <input value={formData.code} maxLength={3} onChange={(event) => setFormData({ ...formData, code: event.target.value })} />
+            </label>
+            <label>Title
+              <input value={formData.title} onChange={(event) => setFormData({ ...formData, title: event.target.value })} />
+            </label>
+            {error && <p role="alert">{error}</p>}
+            <div className="currency-modal-actions">
+              <button type="button" onClick={() => setShowModal(false)}>Cancel</button>
+              <button type="submit">Save currency</button>
+            </div>
+          </form>
+        </div>
+      )}
 
       </div>
 
