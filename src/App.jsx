@@ -15,6 +15,8 @@ import Cases from './pages/Cases';
 import CDD_Onbording from './pages/CDD_onbording';
 import Currencies from './pages/currencies';
 import ParameterCategory from './pages/para-category.jsx';
+import Customers from './pages/Customer.jsx'
+import Orders from './pages/Order.jsx';
 
 function App() {
   return (
@@ -31,6 +33,11 @@ function App() {
             <Route path="/CDD_onbording" element={<CDD_Onbording />} />
             <Route path="/para-category" element={<ParameterCategory />} />
             <Route path="/parameter-categories" element={<ParameterCategory />} />
+            <Route path="/Order" element={<Orders />} />
+            <Route path="/Orders" element={<Orders />} />
+           <Route path="/Customer" element={<Customers />} />
+
+            
 
 
             <Route path="/parameters" element={<Parameters />} />

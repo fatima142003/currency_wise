@@ -120,6 +120,12 @@ export const portalData = {
     "heading": "Resolution Requirements",
     "description": "The full library of resolution checklist items — including the always-required baseline ones. Rules attach whichever elective requirements apply to their outcome severity; items marked \"Always required\" appear on every case regardless."
   },
+
+
+  "Order":{
+    "heading":"Orders",
+    "description":"Currencywise Exchange's orders, sent by its order API. Switch the working tenant in the header to see another tenant's.",
+  },
  
  "CDD_onbording": {
     "heading": "Onbording",
@@ -157,6 +163,58 @@ export const portalData = {
   { code: "INR", title: "Indian Rupee", active: true, updated: "26 Oct, 00:09" },
   { code: "JPY", title: "Japanese Yen", active: true, updated: "26 Oct, 00:09" },
   { code: "USD", title: "United States Dollar", active: true, updated: "26 Oct, 00:09" },
+
+  ],
+  "Customer":{
+    "heading":"Customers",
+    "description":"Currencywise Exchange's customers — individuals and businesses. Switch the working tenant in the header to see another tenant's.",
+  },
+  "Customerinital":[
+    {
+      id:1,
+      name:"AML API TEST",
+      email:"aml.api.test@example.com",
+      References:"REF-Api-test1",
+      channel:"OTC Retail",
+      type:"Individual",
+      verification:"Pending",
+      risk:"Medium",
+      source:"Api",
+      created:"26 oct,17:01",
+      extra:"api:aml_live_OI388k",
+      authorised:"-",
+
+    },
+     {
+      id: 2,
+    name: "AML Test Individual",
+    email: "aml.test.individual@example.com",
+    reference: "IND-TEST-2",
+    channel: "OTC Retail",
+    type: "Individual",
+    verification: "Pending",
+    risk: "High",
+    source: "Portal",
+    created: "25 Oct, 00:42",
+    extra: "fatstlife@gmail.com",
+    authorised: "—",
+
+    },
+    {
+          id: 3,
+    name: "AML Test Business Pty Ltd",
+    email: "aml.test.business@example.com",
+    reference: "ABN 51824753556",
+    channel: "OTC Retail",
+    type: "Business",
+    verification: "Pending",
+    risk: "Medium",
+    source: "Portal",
+    created: "25 Oct, 00:36",
+    extra: "shaikh.aamir@perceptionsystem.in",
+    authorised: "—",
+    },
+    
 
   ],
 
@@ -220,6 +278,7 @@ export const portalData = {
     status: "Active",
   },
   ],
+  
 
 "alerts": [
     {
@@ -401,7 +460,10 @@ export const portalData = {
     "/currencies": "Currencies",
     "/master-parameters": "Master Parameters",
     "/configuration": "Configuration",
-    "/tenants": "Tenants"
+    "/tenants": "Tenants",
+    "/order":"Orders",
+    "/Customer": "Customers"
+
   },
   "navigation": [
     {
@@ -498,9 +560,46 @@ export const portalData = {
           "to": "/tenants",
           "icon": "▥",
           "label": "Tenants"
+        },
+        {
+          "to":"/Customer",
+           "icon":"♙",
+          "label":"Customer"
+        },
+        {
+          "to":"/Orders",
+          "icon":"▤",
+          "label":"Orders"
+        },
+        {
+
+          "to":"/APIs-Keys",
+          "icon":"⌘",
+          "label":"APIs-Keys"
+        }
+      ]
+    },
+    {
+      "title":"USER MANAGEMENT",
+      "items":[
+        {
+          "to":"/Users",
+          "icon":"♟",
+          "label":"Users"
+        },
+        {
+          "to":"/Roles",
+          "icon":"⚙",
+          "label":"Roles"
+        },
+        {
+          "to":"/Permissions",
+          "icon":"✓",
+          "label":"Permissions"
         }
       ]
     }
+   
   ]
 };
 
@@ -522,11 +621,15 @@ export const alerts = portalData.alerts;
 export const alertFilters = portalData.alertFilters;
 export const alertSummary = portalData.alertSummary;
 export const cases = portalData.cases;
+export const Order = portalData.Order;
 export const caseFilters = portalData.caseFilters;
 export const notifications = portalData.notifications;
 export const pageNames = portalData.pageNames;
 export const navigation = portalData.navigation;
 export const parameterCategory=portalData.parameterCategory;
 export const ParameterCategoryList=portalData.ParameterCategoryList;
+export const Customer=portalData.Customer;
+export const Customerinital=portalData.Customerinital;
+
 
 export const initialDocuments = channelDocuments;

@@ -169,7 +169,7 @@ function ParameterCategory() {
           <table className="parameterCategory-table">
             <thead>
               <tr>
-                <th>ORDER</th>
+                <th>ORDERS</th>
                 <th>CATEGORY</th>
                 <th>DESCRIPTION</th>
                 <th>PARAMETERS</th>
