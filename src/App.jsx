@@ -17,6 +17,8 @@ import Currencies from './pages/currencies';
 import ParameterCategory from './pages/para-category.jsx';
 import Customers from './pages/Customer.jsx'
 import Orders from './pages/Order.jsx';
+import  MasterParameters  from './pages/masterParameters.jsx';
+import NewMasterParameter from './pages/NewMasterParameter.jsx';
 
 function App() {
   return (
@@ -36,6 +38,9 @@ function App() {
             <Route path="/Order" element={<Orders />} />
             <Route path="/Orders" element={<Orders />} />
            <Route path="/Customer" element={<Customers />} />
+           <Route path="/master-parameters" element={<MasterParameters />} />
+           <Route path="/master-parameters/new" element={<NewMasterParameter />} />
+           <Route path="/masterparameters" element={<MasterParameters />} />
 
             
 

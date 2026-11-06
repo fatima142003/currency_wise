@@ -137,6 +137,11 @@ export const portalData = {
     "description":"The global currency list shared by every tenant. Only the System portal can add, edit or delete currencies.",
 
   },
+  "masterParameters":{
+    "heading":"Master Parameters",
+    "description":"The system catalogue of AML parameters: what each one controls, its type, default value and whether the law fixes it.",
+
+  },
 
   "currencyList": [
   { code: "AED", title: "United Arab Emirates Dirham", active: true, updated: "26 Oct, 00:09" },
@@ -462,7 +467,8 @@ export const portalData = {
     "/configuration": "Configuration",
     "/tenants": "Tenants",
     "/order":"Orders",
-    "/Customer": "Customers"
+    "/Customer": "Customers",
+    "/masterParameters":"masterParameter",
 
   },
   "navigation": [
@@ -630,6 +636,7 @@ export const parameterCategory=portalData.parameterCategory;
 export const ParameterCategoryList=portalData.ParameterCategoryList;
 export const Customer=portalData.Customer;
 export const Customerinital=portalData.Customerinital;
+export const masterParameters=portalData.masterParameters;
 
 
 export const initialDocuments = channelDocuments;

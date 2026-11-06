@@ -1,0 +1,23 @@
+.master-parameter-page { padding: 28px 32px; color: #17233c; }
+.master-parameter-heading { display: flex; align-items: center; justify-content: space-between; gap: 16px; margin-bottom: 18px; }
+.master-parameter-heading h1 { margin: 0 0 5px; font-size: 22px; }
+.master-parameter-heading p { margin: 0; color: #6b7890; font-size: 13px; }
+.Add-paramter { display: inline-flex; align-items: center; gap: 7px; border: 0; border-radius: 6px; padding: 9px 12px; background: #2855ed; color: white; cursor: pointer; font-weight: 600; }
+.Master-parameter-card { overflow: hidden; border: 1px solid #dce3ed; border-radius: 8px; background: white; }
+.master-parameter-toolbar { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; padding: 12px; border-bottom: 1px solid #e8edf4; }
+.master-parameter-tabs { display: flex; flex-wrap: wrap; gap: 4px; margin-right: auto; }
+.master-parameter-tabs .orders-tab { display: inline-flex; align-items: center; gap: 6px; border: 0; border-radius: 5px; padding: 7px 9px; background: transparent; color: #61708a; cursor: pointer; font-size: 12px; }
+.master-parameter-tabs .orders-tab.selected { background: #eff3ff; color: #2855ed; }
+.master-parameter-tabs .orders-count { color: #8290a6; font-size: 10px; }
+.master-parameter-search { display: flex; align-items: center; gap: 6px; border: 1px solid #dce3ed; border-radius: 5px; padding: 0 8px; color: #8996aa; }
+.master-parameter-search input { width: 160px; height: 32px; border: 0; outline: 0; }
+.master-parameter-toolbar select { height: 34px; border: 1px solid #dce3ed; border-radius: 5px; padding: 0 8px; background: white; color: #465570; }
+.master-parameter-table-wrap { overflow-x: auto; }
+.master-parameter-table { width: 100%; border-collapse: collapse; text-align: left; font-size: 12px; }
+.master-parameter-table th { padding: 11px 12px; background: #f8fafc; color: #71809a; font-size: 10px; font-weight: 600; text-transform: uppercase; }
+.master-parameter-table td { padding: 12px; border-top: 1px solid #edf1f6; color: #42516b; }
+.master-parameter-table td strong, .master-parameter-table td small { display: block; }
+.master-parameter-table td strong { color: #1c2941; }
+.master-parameter-table td small { margin-top: 3px; color: #8391a7; font: 10px monospace; }
+.master-parameter-table .master-parameter-empty { padding: 32px; text-align: center; color: #8290a6; }
+@media (max-width: 700px) { .master-parameter-page { padding: 20px 12px; } .master-parameter-heading { align-items: flex-start; flex-direction: column; } }
